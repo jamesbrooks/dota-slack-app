@@ -1,0 +1,48 @@
+.friend {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.friend-avatar {
+  height: 100%;
+  width: 100%;
+}
+
+.friend-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 0.75em;
+  text-align: center;
+  color: white;
+}
+
+.friend--selectable {
+  cursor: pointer;
+
+  .friend-avatar {
+    filter: brightness(0.7);
+  }
+
+  .friend-name {
+    color: #ddd;
+  }
+
+  &.friend--selected {
+    .friend-avatar {
+      filter: brightness(1);
+    }
+
+    .friend-name {
+      color: #7ee7e7;
+    }
+  }
+}

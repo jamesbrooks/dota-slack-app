@@ -1,0 +1,6 @@
+%h2 Friends
+
+- current_user.friends.each do |friend|
+  .friend.friend--selectable
+    = image_tag friend.avatar_url, class: 'friend-avatar'
+    .friend-name= friend
